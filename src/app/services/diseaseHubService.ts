@@ -26,22 +26,17 @@ export class DiseaseHubService {
   }
 
   insert(disease: Disease) {
-    console.log("in insert....");
     return this.http.post(this.diseaseServiceUrl, disease)
       .map((res) => res.json());
   }
 
   update(disease: Disease) {
-    console.log("in update....");
-    console.log(this.diseaseServiceUrl + disease.diseaseId.toString());
 
     return this.http.put(this.diseaseServiceUrl + disease.diseaseId.toString(), disease)
       .map((res) => res.json());
   }
 
   delete(diseaseId: Number) {
-    console.log("in delete....");
-    console.log(this.diseaseServiceUrl + diseaseId.toString());
     return this.http.delete(this.diseaseServiceUrl + diseaseId.toString())
       .map((res) => res.json());
   }

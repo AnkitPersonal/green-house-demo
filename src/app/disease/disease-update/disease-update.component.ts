@@ -20,7 +20,7 @@ export class DiseaseUpdateComponent implements OnInit {
     public diseaseHub: DiseaseHubService,
     public location: Location) {
 
-    this.disease = new Disease(12, "d", "", "", "", "");
+    this.disease = new Disease(0, "", "", "", "", "");
     route.params.subscribe(params => { this.id = params['id'] });
   }
 
@@ -50,5 +50,9 @@ export class DiseaseUpdateComponent implements OnInit {
         this.disease_error = true;
       }
       );
+  }
+
+  back(): void {
+    this.location.back();
   }
 }

@@ -20,6 +20,7 @@ export class DiseaseAddComponent implements OnInit {
     public diseaseHub: DiseaseHubService,
     public location: Location) {
 
+    this.disease = new Disease(0, null, null, null, null, null);
     route.params.subscribe(params => { this.id = params['id'] });
   }
 

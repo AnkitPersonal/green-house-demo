@@ -4,15 +4,30 @@
     <table>
       <tr>
         <td><label>DiseaseId:</label></td>
-        <td><input type="number" name="diseaseId" ngModel></td>
+        <td>
+          <input type="number" name="diseaseId" [ngModel]="disease.diseaseId" required #diseaseId="ngModel">
+          <small [hidden]="diseaseId.valid || (diseaseId.pristine && !form.submitted)">
+              Disease Id is required field.
+          </small>
+        </td>
       </tr>
       <tr>
         <td><label>Name:</label></td>
-        <td><input type="text" name="name" ngModel></td>
+        <td>
+          <input type="text" name="name" [ngModel]="disease.name" required #name="ngModel">
+          <small [hidden]="name.valid || (name.pristine && !form.submitted)">
+              Name is required field.
+          </small>
+        </td>
       </tr>
       <tr>
         <td><label>Description:</label></td>
-        <td><input type="text" name="description" ngModel></td>
+        <td>
+          <input type="text" name="description" [ngModel]="disease.description" required #description="ngModel">
+          <small [hidden]="description.valid || (description.pristine && !form.submitted)">
+              Description is required field.
+          </small>
+        </td>
       </tr>
       <tr>
         <td><label>Symptoms:</label></td>
@@ -27,8 +42,8 @@
         <td><input type="text" name="imageUrl" ngModel></td>
       </tr>
       <tr>
-        <td><button type="submit">Submit</button> </td>
-         <td><a href (click)="back()">Yes</a></td>
+        <td><button type="submit" [disabled]="!form.form.valid">Submit</button> </td>
+        <td><a href (click)="back()">Back</a></td>
       </tr>
     </table>
   </form>
