@@ -1,0 +1,35 @@
+<div>
+  <h1>New Disease </h1>
+  <form #form="ngForm" (ngSubmit)="submit(form.value)" class="border">
+    <table>
+      <tr>
+        <td><label>DiseaseId:</label></td>
+        <td><input type="number" name="diseaseId" ngModel></td>
+      </tr>
+      <tr>
+        <td><label>Name:</label></td>
+        <td><input type="text" name="name" ngModel></td>
+      </tr>
+      <tr>
+        <td><label>Description:</label></td>
+        <td><input type="text" name="description" ngModel></td>
+      </tr>
+      <tr>
+        <td><label>Symptoms:</label></td>
+        <td><input type="text" name="symptoms" ngModel></td>
+      </tr>
+      <tr>
+        <td> <label>Remedy:</label></td>
+        <td><input type="text" name="remedy" ngModel></td>
+      </tr>
+      <tr>
+        <td> <label>ImageUrl:</label></td>
+        <td><input type="text" name="imageUrl" ngModel></td>
+      </tr>
+      <tr>
+        <td><button type="submit">Submit</button> </td>
+         <td><a href (click)="back()">Yes</a></td>
+      </tr>
+    </table>
+  </form>
+</div>

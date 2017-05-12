@@ -1,0 +1,14 @@
+<div>
+  <h1>Disease Details</h1>
+  <br/>
+  <p>{{disease.diseaseId}}</p>
+  <p>{{disease.name}}</p>
+  <p>{{disease.description}}</p>
+  <p>{{disease.symptoms}}</p>
+  <p>{{disease.remedy}}</p>
+  <p>
+     <img src="http://localhost:4200/assets/images/{{disease.imageUrl}}" 
+      title="{{disease.imageUrl}}">
+  <p>
+</div>
+<button (click)="back()">Back</button>

@@ -1,0 +1,20 @@
+<h2><small>Disease Catalog</small></h2>
+
+<a [routerLink]="['/create']">Add new</a>
+<table>
+  <tr *ngFor="let disease of diseases">
+    <td> <img src="http://localhost:4200/assets/images/{{disease.imageUrl}}" title="{{disease.imageUrl}}"></td>
+    <td>
+      <div>
+        <p>DiseaseId: {{disease.diseaseId}}</p>
+        <p>Name : {{disease.name}} </p>
+        <p>Description: {{disease.description}} </p>
+        <p>Symptoms: {{disease.symptoms}} </p>
+        <p>Remedy: {{disease.remedy}} </p>
+        <a [routerLink]="['/detail', disease.diseaseId]">detail</a>
+        <a [routerLink]="['/update', disease.diseaseId]">update</a>
+        <a [routerLink]="['/delete', disease.diseaseId]">delete</a>
+      </div>
+    </td>
+  </tr>
+</table>

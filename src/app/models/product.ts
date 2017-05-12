@@ -11,5 +11,5 @@ export class Product {
         public price: number,
         public quantity: number,
         public paymentTerm: string,
-        public delivery: string) {}
+        public delivery: string) { }
 }
