@@ -18,6 +18,7 @@ import { AppComponent } from './app.component';
     AppComponent,
 
   ],
+
   imports: [
     BrowserModule,
     FormsModule,
@@ -25,11 +26,13 @@ import { AppComponent } from './app.component';
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
+
   providers: [
     ProductHubService,
     { provide: APP_BASE_HREF, useValue: '/' },
     { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
