@@ -27,11 +27,11 @@ export class DiseaseAddComponent implements OnInit {
   ngOnInit() { }
 
   submit(form) {
-    this.disease = form;
+    //this.disease = form;
     console.log("Add Compnent: ", form);
     this.diseaseHub.insert(form).subscribe(
       data => {
-        this.disease = data;
+        //this.disease = data;
         this.location.back();
       },
       err => {
@@ -39,7 +39,6 @@ export class DiseaseAddComponent implements OnInit {
         console.log("Add Compnent: Err:", err);
       }
     );
-
   }
 
   back(): void {

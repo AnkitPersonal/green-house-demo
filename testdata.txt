@@ -1,0 +1,28 @@
+ng new green-house-demo
+New component
+	ng g component disease-list
+	ng g component disease-add
+	ng g component disease-delete
+	ng g component disease-detail
+	ng g component disease-update
+	
+npm start
+	ng serve: http://localhost:4200
+
+cd C:\Program Files\MongoDB\Server\3.4\bin
+mongod.exe --dbpath "C:\data\db"
+------
+cd C:\Program Files\MongoDB\Server\3.4\bin
+mongo.exe
+show dbs
+use tfl
+show collections
+db.products.find().pretty()
+db.users.find().pretty()
+-------
+mongoimport.exe --db tfl --collection products --file products.json
+mongoimport.exe --db tfl --collection users --file users.json
+mongoimport.exe --db tfl --collection diseases --file diseases.json
+db.products.find().pretty()
+db.users.find().pretty()
+db.diseases.find().pretty()
